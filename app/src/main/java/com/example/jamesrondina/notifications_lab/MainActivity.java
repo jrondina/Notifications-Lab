@@ -1,7 +1,9 @@
 package com.example.jamesrondina.notifications_lab;
 
 import android.app.Notification;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.net.ConnectivityManager;
@@ -51,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
 
             nb.setStyle(gangnamStyle);
         }
+
+        NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        mNotificationManager.notify(1, nb.build());
 
 
 
